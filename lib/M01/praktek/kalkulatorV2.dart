@@ -25,7 +25,7 @@ void main() {
   } else if (operasi == 7) {
     hasil = squareRoot(angka1);
   } else {
-    print('Operasi tidak valid');
+    print('Operasi tidak valid!');
     return;
   }
 
