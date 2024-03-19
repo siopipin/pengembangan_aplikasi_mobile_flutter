@@ -40,6 +40,15 @@ class Library {
   void removeBook(Book book) {
     books.remove(book);
   }
+
+  searchByAuthorAndRemove(String search) {
+    List<Book> res = books
+        .where(
+            (book) => book.author.toLowerCase().contains(search.toLowerCase()))
+        .toList();
+
+    books.remove(res[0]);
+  }
 }
 
 void main() {
@@ -60,8 +69,9 @@ void main() {
     print('Title: ${result.title}, Author: ${result.author}');
   }
 
-  myLibrary.removeBook(book1);
+  // cari buku berdasarkan nama penulis, kemudian hapus.
+  myLibrary.searchByAuthorAndRemove("Ricky");
 
-  print('\nUpdated List of Books in Library:');
+  print('\nhasil hapus of Books in Library:');
   myLibrary.displayAllBooks();
 }
