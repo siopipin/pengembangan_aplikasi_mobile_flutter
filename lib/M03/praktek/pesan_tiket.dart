@@ -43,7 +43,7 @@ Future<bool> bookingTiket(dynamic duit) async {
   return _bookingStatus;
 }
 
-// konfirmasi pembayaran dengan parameter opsional 'bayar' yang harus diisi
+// Fungsi untuk melakukan konfirmasi pembayaran dengan parameter opsional 'bayar' yang harus diisi
 Future<void> konfirmasiPembayaran({required bool bayar}) async {
   // Menunggu hasil dari Future.delayed selama 3 detik dengan nilai 'bayar'
   bool _telahBayar = await Future.delayed(Duration(seconds: 3), () => bayar);
