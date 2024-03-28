@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M04/box_widget.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M04/text_widget.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M04/teori/box_widget.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M04/teori/text_widget.dart';
 
 void main() {
   runApp(const MyApp());
