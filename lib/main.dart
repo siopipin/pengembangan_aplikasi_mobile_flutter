@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M04/praktek/widget_basic.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M04/teori/box_widget.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M04/teori/text_widget.dart';
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: TitleWidget(),
+      home: WidgetBasic(),
     );
   }
 }
@@ -89,22 +90,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            BoxWidget(),
-            BoxWidget(),
             const Text(
               'You have pushed the button this many times:',
-              style: TextStyle(color: Colors.redAccent, fontSize: 20.0),
             ),
-            Row(
-              children: [
-                Text(
-                  '$_counter',
-                  style: Theme.of(context).textTheme.headlineMedium,
-                ),
-                Text(":"),
-                Text("Kelvin")
-              ],
-            )
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
           ],
         ),
       ),
