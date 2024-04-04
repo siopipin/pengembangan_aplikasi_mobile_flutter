@@ -61,8 +61,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/ #registall all file on iamges folder
-    - assets/images/logo.jpeg #jika ingin register single image
+    - assets/images/ #regist all all file on iamges folder
+    - assets/images/logo.jpeg #jika ingin register single imag
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

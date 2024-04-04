@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M04/praktek/widget_basic.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M04/teori/box_widget.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M04/teori/text_widget.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M05/praktek/ig_screen.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M05/praktek/instagram_screen.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M05/teori/layout.dart';
 
 void main() {
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LayoutScreen(),
+      home: InstagramScreen(),
     );
   }
 }

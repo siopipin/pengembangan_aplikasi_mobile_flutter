@@ -79,11 +79,11 @@ class _LayoutScreenState extends State<LayoutScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.network(
-                    'https://mikroskil.id/bundles/mikroskilglobal/images/logo_with_background.png',
+                    'https://media.neliti.com/media/organisations/logo-211-stmik-stie-mikroskil.jpeg',
                     width: 100),
                 Expanded(
                   child: Image.network(
-                      'https://mikroskil.id/bundles/mikroskilglobal/images/logo_with_background.png'),
+                      'https://media.neliti.com/media/organisations/logo-211-stmik-stie-mikroskil.jpeg'),
                 )
               ],
             ),
@@ -94,7 +94,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
               child: Row(
                 children: [
                   Image.network(
-                    'https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/14053934/Mudah-Dibuat-di-Rumah-Ini-Resep-Sate-Ayam-Bumbu-Kacang-yang-Lezat-.jpg',
+                    'https://media.neliti.com/media/organisations/logo-211-stmik-stie-mikroskil.jpeg',
                     width: 120,
                   ),
                   const SizedBox(width: 20),
@@ -184,11 +184,11 @@ class _LayoutScreenState extends State<LayoutScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.network(
-                    'https://mikroskil.id/bundles/mikroskilglobal/images/logo_with_background.png',
+                    'https://media.neliti.com/media/organisations/logo-211-stmik-stie-mikroskil.jpeg',
                     width: 100),
                 Expanded(
                   child: Image.network(
-                      'https://mikroskil.id/bundles/mikroskilglobal/images/logo_with_background.png'),
+                      'https://media.neliti.com/media/organisations/logo-211-stmik-stie-mikroskil.jpeg'),
                 )
               ],
             ),
