@@ -73,9 +73,12 @@ class _InstagramScreenState extends State<InstagramScreen> {
                         children: [
                           Padding(
                             padding: EdgeInsets.only(right: 10),
-                            child: Icon(
-                              Icons.heart_broken_outlined,
-                              size: 35,
+                            child: IconButton(
+                              onPressed: () => Navigator.pop(context),
+                              icon: Icon(
+                                Icons.heart_broken_outlined,
+                                size: 35,
+                              ),
                             ),
                           ),
                           Padding(
