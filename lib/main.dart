@@ -5,6 +5,7 @@ import 'package:pengembangan_aplikasi_mobile_flutter/M04/teori/text_widget.dart'
 import 'package:pengembangan_aplikasi_mobile_flutter/M05/praktek/ig_screen.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M05/praktek/instagram_screen.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M05/teori/layout.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M06/praktek/auth_screen.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M06/teori/login_screen.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M06/teori/news_screen.dart';
 
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginScreenM06(),
+      home: AuthScreen(),
     );
   }
 }
