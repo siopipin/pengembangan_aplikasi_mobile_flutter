@@ -25,7 +25,11 @@ class DetailNewsScreen extends StatelessWidget {
               if (id == 1)
                 Column(children: [Text('Halaman Detail Berita Pertama')])
               else
-                Column(children: [Text('Halaman Detail Berita Kedua')])
+                Column(children: [Text('Halaman Detail Berita Kedua')]),
+
+              ElevatedButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: Text("Kembali"))
             ],
           )),
     );

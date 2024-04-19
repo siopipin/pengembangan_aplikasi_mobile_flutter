@@ -8,6 +8,7 @@ import 'package:pengembangan_aplikasi_mobile_flutter/M05/teori/layout.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M06/praktek/auth_screen.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M06/teori/login_screen.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M06/teori/news_screen.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M06/test/auth2_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: AuthScreen(),
+      home: Auth2Screen(),
     );
   }
 }
