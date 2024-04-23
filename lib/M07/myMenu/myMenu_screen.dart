@@ -93,9 +93,14 @@ class _MyMenuState extends State<MyMenu> {
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                 ),
                 for (var menu in _selectedMenus)
-                  Text('${menu['name']} - Rp ${menu['price']}'),
-                Divider(),
-                Text('Total: Rp $_totalPrice'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [Text(menu['name']), Text('Rp ${menu['price']}')],
+                  ),
+                const Divider(),
+                Align(
+                    alignment: Alignment.bottomRight,
+                    child: Text('Total: Rp $_totalPrice')),
               ],
             ),
           ),
