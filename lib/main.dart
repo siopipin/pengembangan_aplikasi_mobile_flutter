@@ -10,6 +10,7 @@ import 'package:pengembangan_aplikasi_mobile_flutter/M06/teori/login_screen.dart
 import 'package:pengembangan_aplikasi_mobile_flutter/M06/teori/news_screen.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M06/test/auth2_screen.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M07/myMenu/login_myMenu.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M07/praktek/login_ujian.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M07/teori/counter_screen.dart';
 
 void main() {
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginMyMenu(),
+      home: LoginExamPage(),
     );
   }
 }
