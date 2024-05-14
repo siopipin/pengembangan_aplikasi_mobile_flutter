@@ -2,12 +2,12 @@ import 'package:flutter/foundation.dart';
 
 class CounterProvider extends ChangeNotifier {
   //initialisasi
-  String _kasir = "-";
   bool _isLoading = false;
   bool _isError = false;
 
   bool get isLoading => _isLoading;
   set setLoading(val) {
+    print("nilai loading? $val");
     _isLoading = val;
     notifyListeners();
   }
@@ -18,6 +18,7 @@ class CounterProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  String _kasir = "-";
   String get kasir => _kasir;
   set setKasir(val) {
     _kasir = val;

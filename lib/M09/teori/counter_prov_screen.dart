@@ -22,6 +22,7 @@ class _CounterProvScreenState extends State<CounterProvScreen> {
   @override
   Widget build(BuildContext context) {
     final watchProvider = context.watch<CounterProvider>();
+    print(watchProvider.isLoading);
     return DefaultTabController(
       length: 3,
       child: Scaffold(
@@ -60,13 +61,8 @@ class _CounterProvScreenState extends State<CounterProvScreen> {
       children: [
         Row(
           children: [
-            Text(
-              watchProvider.kasir,
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-            SizedBox(width: 10),
+            Text(watchProvider.kasir, style: const TextStyle(fontSize: 20)),
+            const SizedBox(width: 10),
             ElevatedButton(
                 onPressed: () {
                   readProvider.getData("antono");
