@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M04/praktek/widget_basic.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M04/teori/box_widget.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M04/teori/text_widget.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M05/praktek/ig_screen.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M05/praktek/instagram_screen.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M05/teori/layout.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M06/praktek/auth_screen.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M06/teori/login_screen.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M06/teori/news_screen.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M06/test/auth2_screen.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M07/crud_example/book_screen.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M07/myMenu/login_myMenu.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M07/praktek/login_ujian.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M07/teori/counter_screen.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M07/xl/xl_screen.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M09/teori/counter_nonprov_screen.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M09/teori/counter_prov_screen.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M09/teori/providers/counter_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      // tambahkan class provider lain disini
+      ChangeNotifierProvider(create: (context) => CounterProvider()),
+    ],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -31,7 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: BookScreen(),
+      home: const CounterProvScreen(),
     );
   }
 }
