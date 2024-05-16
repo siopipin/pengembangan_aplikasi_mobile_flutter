@@ -31,6 +31,9 @@ class MyListProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  // lengkapi fungsi ini untuk simulasi pengambilan data dari server (gunakan future.delayed). Saat fungsi ini dipanggil, maka isLoading harus diubah menjadi true, kemudian tambahkan 1 sampel data Produk dan setelah proses selesai isLoading harus diubah menjadi false.
+  fetchData() {}
+
   addProduk(Produk produk) async {
     try {
       setLoading(true);

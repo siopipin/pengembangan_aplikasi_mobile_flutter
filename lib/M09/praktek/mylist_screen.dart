@@ -16,6 +16,12 @@ class _MyListScreenState extends State<MyListScreen> {
     final myListProvider = context.watch<MyListProvider>();
     final myListReadProvider = context.watch<MyListProvider>();
 
+    initState() {
+      super.initState();
+
+      // task: saat pertama sekali aplikasi dijalankan, kita perlu panggil fungsi fetchData untuk mengambil data dari server (simulasi dengan Future.delayed). Tambahkan fungsi fetchData ini pada provider. (lihat pada file mylist_provider.dart)
+    }
+
     return Scaffold(
       appBar: AppBar(title: const Text("My List")),
       body: Padding(
@@ -40,6 +46,7 @@ class _MyListScreenState extends State<MyListScreen> {
                     trailing: IconButton(
                       icon: const Icon(Icons.delete),
                       onPressed: () {
+                        // task: pada provider kita perlu simulasikan proses removeProduk ini butuh waktu, maka kita gunakan Future.delayed dengan durasi 2 detik.
                         myListProvider.removeProdukById(barang.nama);
                       },
                     ),
@@ -61,6 +68,9 @@ class _MyListScreenState extends State<MyListScreen> {
                         ),
                       ),
                       const SizedBox(width: 8),
+
+                      // task: tambahkan disini 1 textfield untuk harga barang.
+
                       Expanded(
                           child: TextField(
                         controller: myListProvider.qtyBarangController,
@@ -78,6 +88,7 @@ class _MyListScreenState extends State<MyListScreen> {
                           await myListReadProvider.addProduk(
                             Produk(
                               nama: myListProvider.namaBarangController.text,
+                              // task: tambahkan harga disini. (maka perlu menambahkan harga di model produk_model.dart)
                               stok: int.parse(
                                   myListProvider.qtyBarangController.text),
                             ),
