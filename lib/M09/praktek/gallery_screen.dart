@@ -16,10 +16,14 @@ class GalleryScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              bookWatchProvider.bookName,
-              style: TextStyle(fontSize: 25),
-            ),
+            bookWatchProvider.memutar == true
+                ? Center(
+                    child: CircularProgressIndicator(),
+                  )
+                : Text(
+                    bookWatchProvider.bookName,
+                    style: TextStyle(fontSize: 25),
+                  ),
             TextField(
               controller: bookWatchProvider.controller,
               decoration: InputDecoration(
@@ -29,7 +33,24 @@ class GalleryScreen extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                bookProvider.changeKasir = bookWatchProvider.controller.text;
+                if (bookWatchProvider.controller.text.isEmpty) {
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SimpleDialog(
+                          title: Text("Warning"),
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Book Name cannot be empty"),
+                            ),
+                          ],
+                        );
+                      });
+                } else {
+                  bookProvider.ubahIdentitasBuku(
+                      bookWatchProvider.controller.text, "Erlangga");
+                }
               },
               child: Text("Change Book Name"),
             ),

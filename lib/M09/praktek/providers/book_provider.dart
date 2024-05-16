@@ -10,4 +10,32 @@ class BookProvider extends ChangeNotifier {
     _bookName = newBookName;
     notifyListeners();
   }
+
+  String _penerbit = "-";
+  String get penerbit => _penerbit;
+  set gantiPenerbit(String x) {
+    _penerbit = x;
+    notifyListeners();
+  }
+
+  bool _memutar = false;
+  bool get memutar => _memutar;
+  set gantimemutar(val) {
+    _memutar = val;
+    notifyListeners();
+  }
+
+  ubahIdentitasBuku(String namaBuku, String penerbit) async {
+    try {
+      gantimemutar = true;
+      await Future.delayed(Duration(seconds: 3), () {
+        gantiPenerbit = penerbit;
+        changeKasir = namaBuku;
+      });
+    } catch (e) {
+      // handle error
+    } finally {
+      gantimemutar = false;
+    }
+  }
 }
