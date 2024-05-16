@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M07/crud_example/book_screen.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M09/teori/counter_nonprov_screen.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M09/teori/counter_prov_screen.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M09/teori/login_screen/login_nonprov_screen.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M09/teori/providers/counter_provider.dart';
-import 'package:pengembangan_aplikasi_mobile_flutter/M09/teori/providers/login_provider.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M09/praktek/mylist_screen.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M09/praktek/providers/mylist_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(MultiProvider(
     providers: [
       // tambahkan class provider lain disini
-      ChangeNotifierProvider(create: (context) => CounterProvider()),
-      ChangeNotifierProvider(create: (context) => LoginProvider()),
+      ChangeNotifierProvider(create: (context) => MyListProvider()),
     ],
     child: const MyApp(),
   ));
@@ -30,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginNonProvScreen(),
+      home: const MyListScreen(),
     );
   }
 }
