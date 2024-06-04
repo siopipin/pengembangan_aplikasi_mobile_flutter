@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M10/praktek/controllers/hero_provider.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M10/praktek/views/hero_screen.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M11/teori/screens/user_list_screen.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M11/teori/screens/user_list_screen_from_jsonplaceholder.dart';
 
 import 'package:provider/provider.dart';
 
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HeroScreen(),
+      home: UserListPlaceHolderScreen(),
     );
   }
 }
