@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M10/teori/controllers/car_controller.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M10/teori/models/car_model.dart';
@@ -71,6 +72,29 @@ class _CarViewState extends State<CarView> {
                         ),
                       );
                     },
+                  ),
+                ),
+                SizedBox(
+                  height: 300,
+                  child: CarouselSlider(
+                    options: CarouselOptions(
+                      height: 400.0,
+                      autoPlay: true,
+                      enlargeCenterPage: true,
+                    ),
+                    items: [1, 2, 3, 4, 5].map((i) {
+                      return Builder(
+                        builder: (BuildContext context) {
+                          return Container(
+                              width: MediaQuery.of(context).size.width,
+                              margin: EdgeInsets.symmetric(horizontal: 5.0),
+                              decoration:
+                                  BoxDecoration(color: Colors.transparent),
+                              child: Image.network(
+                                  'https://picsum.photos/id/$i/200/300'));
+                        },
+                      );
+                    }).toList(),
                   ),
                 ),
                 const Divider(),

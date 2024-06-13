@@ -46,9 +46,21 @@ class HeroScreen extends StatelessWidget {
           if (heroProvider.selectedHero.isEmpty)
             const Text("No Hero Selected")
           else
-            Text("Selected Hero: ${heroProvider.selectedHero}")
+            showHero(context)
         ],
       ),
+    );
+  }
+
+  showHero(BuildContext context) {
+    //tambahakn provider
+    final heroProvider = context.watch<HeroProvider>();
+
+    return Column(
+      children: [
+        Text("Selected Hero: ${heroProvider.selectedHero}"),
+        Text("Hero power ${heroProvider.heroData[0].showPower()}")
+      ],
     );
   }
 }

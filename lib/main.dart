@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M10/praktek/controllers/hero_provider.dart';
 import 'package:pengembangan_aplikasi_mobile_flutter/M10/praktek/views/hero_screen.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M10/teori/controllers/car_controller.dart';
+import 'package:pengembangan_aplikasi_mobile_flutter/M10/teori/views/car_view.dart';
 
 import 'package:provider/provider.dart';
 
@@ -9,6 +11,7 @@ void main() {
     providers: [
       // tambahkan class provider lain disini
       ChangeNotifierProvider(create: (context) => HeroProvider()),
+      ChangeNotifierProvider(create: (context) => CarController()),
     ],
     child: const MyApp(),
   ));
@@ -25,7 +28,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HeroScreen(),
+      // home: const HeroScreen(),
+      home: const CarView(),
     );
   }
 }

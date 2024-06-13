@@ -6,13 +6,16 @@ class HeroModel {
 
   HeroModel({this.name, this.power, this.age});
 
-  void showPower() {
+  String showPower() {
     if (power == 'Super Strength') {
       print('Hero ini memiliki kekuatan super strength');
+      return "Hero ini memiliki kekuatan super strength";
     } else if (power == 'Super Speed') {
       print('Hero ini memiliki kekuatan super speed');
+      return "Hero ini memiliki kekuatan super speed";
     } else {
-      print('Hero ini memiliki kekuatan super intelligence');
+      print('Hero ini memiliki kekuatan super kaya');
+      return "Hero ini memiliki kekuatan super kaya";
     }
   }
 

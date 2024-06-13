@@ -24,6 +24,21 @@ class HeroProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  tambahHeroBaru({
+    required String namaHero,
+    required String power,
+    required int age,
+  }) {
+    _hero.add(
+      HeroModel(
+        name: namaHero,
+        power: power,
+        age: age,
+      ),
+    );
+    notifyListeners();
+  }
+
   String _selectedHero = '';
   String get selectedHero => _selectedHero;
   set setSelectedHero(String value) {
