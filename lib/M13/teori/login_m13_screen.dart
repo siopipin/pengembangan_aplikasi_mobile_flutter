@@ -21,13 +21,17 @@ class _LoginM13ScreenState extends State<LoginM13Screen> {
   // http post untuk login
   doLogin({required String id, required String password}) async {
     print('do Login $id $password');
-    var url = 'http://localhost:3001/web/auth/login';
+    var url = 'https://dummyjson.com/user/login';
     var response = await http.post(
       Uri.parse(url),
-      body: {
-        "id": id,
-        "password": password,
+      headers: {
+        'Content-Type': 'application/json',
       },
+      body: json.encode({
+        "username": id,
+        "password": password,
+        "expiresInMins": 30,
+      }),
     );
 
     print(response.body);
@@ -36,7 +40,6 @@ class _LoginM13ScreenState extends State<LoginM13Screen> {
       var dataTemp = json.decode(response.body);
       setState(() {
         _token = response.body;
-        _data = dataTemp['token'];
         isLogged = true;
       });
     } else if (response.statusCode == 401) {
@@ -97,7 +100,6 @@ class _LoginM13ScreenState extends State<LoginM13Screen> {
               child: Text('Login'),
             ),
             Text('Token: $_token'),
-            Text('Token Asli: $_data')
           ],
         ),
       ),
