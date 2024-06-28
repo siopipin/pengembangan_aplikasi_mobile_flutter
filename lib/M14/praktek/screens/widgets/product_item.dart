@@ -25,6 +25,8 @@ class ProductItem extends StatelessWidget {
             ),
             Text(product.category ?? "-"),
             Text('\$${product.price}'),
+            Text(product.dimensions!.width ?? 0),
+            Text(product.stock.toString())
           ],
         ),
       ),

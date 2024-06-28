@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:pengembangan_aplikasi_mobile_flutter/M13/teori/list_user_m13_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginM13Screen extends StatefulWidget {
   @override
@@ -38,9 +39,19 @@ class _LoginM13ScreenState extends State<LoginM13Screen> {
     print(response.statusCode);
     if (response.statusCode == 200) {
       var dataTemp = json.decode(response.body);
-      setState(() {
+
+      // ini simpan status loginnya ke sharedpreferences.
+      SharedPreferences data = await SharedPreferences.getInstance();
+
+      await data.setBool('isLogged', true);
+
+      // baca data dari sharepfereference
+      var temp = await data.getBool('isLogged');
+      if (temp != null) {
+        isLogged = temp;
+      }
+      setState(() async {
         _token = response.body;
-        isLogged = true;
       });
     } else if (response.statusCode == 401) {
       // do something
